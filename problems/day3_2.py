@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 import sys
 
-grid = [['#' == c for c in line.strip()] for line in sys.stdin if line]
+grid = [["#" == c for c in line.strip()] for line in sys.stdin if line]
+
 
 def count(right, down):
     count = 0
@@ -10,6 +11,7 @@ def count(right, down):
         if row[i * right % len(row)]:
             count += 1
     return count
+
 
 result = 1
 result *= count(1, 1)
