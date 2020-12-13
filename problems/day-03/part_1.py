@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import sys
 
-grid = [["#" == c for c in line.strip()] for line in sys.stdin if line]
+grid = [["#" == c for c in line.strip()] for line in sys.stdin]
 
 count = 0
 for i in range(1, len(grid)):
