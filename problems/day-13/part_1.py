@@ -7,7 +7,7 @@ buses = [int(text) for text in next(sys.stdin).strip().split(",") if text != "x"
 
 for time in itertools.count(start=start):
     for bus in buses:
-        if not time % int(bus):
+        if not time % bus:
             print((time - start) * bus)
             break
     else:
